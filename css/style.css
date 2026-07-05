@@ -26,9 +26,9 @@
 }
 
 @font-face {
-  font-family: "Rubik Bubbles Local";
-  src: url("../assets/fonts/RubikBubbles-Regular.ttf") format("truetype");
-  font-weight: 400;
+  font-family: "Baloo 2 Local";
+  src: url("../assets/fonts/Baloo2-Variable.ttf") format("truetype");
+  font-weight: 400 800;
   font-style: normal;
   font-display: swap;
 }
@@ -149,9 +149,9 @@ body {
   min-width: 690px;
   min-height: 116px;
   padding: 0 14px 8px;
-  font-family: "Rubik Bubbles Local", "Fredoka Local", "Microsoft YaHei UI", sans-serif;
+  font-family: "Baloo 2 Local", "Fredoka Local", "Microsoft YaHei UI", sans-serif;
   font-size: var(--time-size);
-  font-weight: 400;
+  font-weight: 800;
   line-height: 1;
   letter-spacing: 0;
   filter:
@@ -161,7 +161,7 @@ body {
 
 .time .char {
   display: inline-block;
-  min-width: .61em;
+  min-width: .57em;
   text-align: center;
   color: transparent;
   background:
@@ -170,7 +170,7 @@ body {
     linear-gradient(180deg, #ffffff 0%, #dcecff 23%, var(--bubble-blue) 58%, var(--bubble-purple) 100%);
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-stroke: 3px rgba(247, 244, 255, .98);
+  -webkit-text-stroke: 4px rgba(247, 244, 255, .98);
   text-shadow:
     0 2px 0 #3f66da,
     0 5px 0 rgba(82, 48, 196, .62),
@@ -195,14 +195,14 @@ body {
 }
 
 .time .colon {
-  min-width: .32em;
-  margin: 0 .02em;
+  min-width: .25em;
+  margin: 0 .035em;
   background:
     radial-gradient(circle at 50% 31%, #fff8ce 0 18%, transparent 19%),
     linear-gradient(180deg, #fff5bb, #ffd46d 58%, #f1a54b);
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-stroke: 2px rgba(255, 249, 220, .96);
+  -webkit-text-stroke: 3px rgba(255, 249, 220, .96);
   text-shadow:
     0 3px 0 rgba(176, 109, 30, .48),
     0 9px 14px rgba(15, 6, 60, .34);

@@ -2,6 +2,7 @@ const timeElement = document.getElementById("time");
 const dateElement = document.getElementById("date");
 
 const chineseWeekdays = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+const timeCharacterCount = 8;
 
 const beijingDateFormatter = new Intl.DateTimeFormat("zh-CN", {
   timeZone: "Asia/Shanghai",
@@ -20,15 +21,30 @@ function getPart(parts, type) {
   return parts.find((part) => part.type === type)?.value || "";
 }
 
-function renderBalloonTime(timeText) {
+function initializeTimeCharacters() {
+  if (timeElement.children.length === timeCharacterCount) {
+    return;
+  }
+
   timeElement.innerHTML = "";
 
-  Array.from(timeText).forEach((character, index) => {
+  for (let index = 0; index < timeCharacterCount; index += 1) {
     const span = document.createElement("span");
-    span.className = character === ":" ? "char colon" : "char";
+    span.className = index === 2 || index === 5 ? "char colon" : "char";
     span.style.setProperty("--i", index);
-    span.textContent = character;
+    span.textContent = index === 2 || index === 5 ? ":" : "0";
     timeElement.appendChild(span);
+  }
+}
+
+function renderBalloonTime(timeText) {
+  initializeTimeCharacters();
+
+  Array.from(timeText).forEach((character, index) => {
+    const span = timeElement.children[index];
+    if (span && span.textContent !== character) {
+      span.textContent = character;
+    }
   });
 }
 

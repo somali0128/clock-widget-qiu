@@ -79,7 +79,7 @@ VTube Studio：
 - `ear_right.png`
 - `fox_front.png`
 
-四张图会按同一画布坐标叠放。字体文件位于 `assets/fonts`。当前使用 `RubikBubbles-Regular.ttf` 作为气球数字字体，使用 `Fredoka-Variable.ttf` 作为日期和 fallback 字体，CSS 中已用 `@font-face` 引入。如需替换字体，把新的可商用字体文件放入 `assets/fonts`，再修改 `css/style.css` 中的 `@font-face` 路径和字体名。
+四张图会按同一画布坐标叠放。字体文件位于 `assets/fonts`。当前使用 `Baloo2-Variable.ttf` 作为更圆润的气球数字字体，使用 `Fredoka-Variable.ttf` 作为日期和 fallback 字体，CSS 中已用 `@font-face` 引入。如需替换字体，把新的可商用字体文件放入 `assets/fonts`，再修改 `css/style.css` 中的 `@font-face` 路径和字体名。
 
 ## 如何确认透明背景
 
@@ -107,14 +107,14 @@ background: transparent;
 
 本项目内置两款 Google Fonts 字体：
 
-Rubik Bubbles：
+Baloo 2：
 
-- 用途：时间数字的气球泡泡字体
+- 用途：时间数字的圆润气球字体
 - 来源：Google Fonts
 - 授权：SIL Open Font License 1.1
 - 可免费商用
-- 官方页面：https://fonts.google.com/specimen/Rubik+Bubbles
-- 源码仓库：https://github.com/google/fonts/tree/main/ofl/rubikbubbles
+- 官方页面：https://fonts.google.com/specimen/Baloo+2
+- 源码仓库：https://github.com/google/fonts/tree/main/ofl/baloo2
 
 Fredoka：
 
