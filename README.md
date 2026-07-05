@@ -79,7 +79,7 @@ VTube Studio：
 - `ear_right.png`
 - `fox_front.png`
 
-四张图会按同一画布坐标叠放。字体文件位于 `assets/fonts`。当前使用 `Baloo2-Variable.ttf` 作为更圆润的气球数字字体，使用 `Fredoka-Variable.ttf` 作为日期和 fallback 字体，CSS 中已用 `@font-face` 引入。如需替换字体，把新的可商用字体文件放入 `assets/fonts`，再修改 `css/style.css` 中的 `@font-face` 路径和字体名。
+四张图会按同一画布坐标叠放。字体文件位于 `assets/fonts`。当前使用用户提供的 `HollyBerryPop-PVxdZ.otf` 作为数字时钟字体，`Baloo2-Variable.ttf` 作为数字 fallback，`Fredoka-Variable.ttf` 作为日期和通用 fallback 字体。CSS 中已用 `@font-face` 引入。如需替换字体，把新的可用字体文件放入 `assets/fonts`，再修改 `css/style.css` 中的 `@font-face` 路径和字体名。
 
 ## 如何确认透明背景
 
@@ -105,7 +105,16 @@ background: transparent;
 
 ## 字体来源和授权
 
-本项目内置两款 Google Fonts 字体：
+本项目内置和使用以下字体：
+
+Holly Berry Pop：
+
+- 用途：时间数字字体
+- 文件：`assets/fonts/HollyBerryPop-PVxdZ.otf`
+- 来源：用户提供
+- 授权：请以用户获取该字体时的授权条款为准
+
+Google Fonts fallback：
 
 Baloo 2：
 

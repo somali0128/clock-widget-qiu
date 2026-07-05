@@ -26,6 +26,14 @@
 }
 
 @font-face {
+  font-family: "Holly Berry Pop Local";
+  src: url("../assets/fonts/HollyBerryPop-PVxdZ.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "Baloo 2 Local";
   src: url("../assets/fonts/Baloo2-Variable.ttf") format("truetype");
   font-weight: 400 800;
@@ -149,9 +157,9 @@ body {
   min-width: 690px;
   min-height: 116px;
   padding: 0 14px 8px;
-  font-family: "Baloo 2 Local", "Fredoka Local", "Microsoft YaHei UI", sans-serif;
+  font-family: "Holly Berry Pop Local", "Baloo 2 Local", "Fredoka Local", "Microsoft YaHei UI", sans-serif;
   font-size: var(--time-size);
-  font-weight: 800;
+  font-weight: 400;
   line-height: 1;
   letter-spacing: 0;
   filter:

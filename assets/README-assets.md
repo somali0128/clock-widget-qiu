@@ -4,6 +4,12 @@
 
 当前项目内置字体：
 
+- `fonts/HollyBerryPop-PVxdZ.otf`
+- 字体名称：Holly Berry Pop
+- 来源：用户提供
+- 用途：时间数字字体
+- 授权：请以用户获取该字体时的授权条款为准
+
 - `fonts/Fredoka-Variable.ttf`
 - 字体名称：Fredoka
 - 来源：Google Fonts / google/fonts
@@ -18,7 +24,7 @@
 - 官方页面：https://fonts.google.com/specimen/Baloo+2
 - 源码仓库：https://github.com/google/fonts/tree/main/ofl/baloo2
 
-CSS 已通过 `@font-face` 引入以上字体，项目离线打开即可使用。其中 Baloo 2 用于气球数字，Fredoka 用于日期和 fallback。
+CSS 已通过 `@font-face` 引入以上字体，项目离线打开即可使用。其中 Holly Berry Pop 用于时间数字，Baloo 2 用作数字 fallback，Fredoka 用于日期和通用 fallback。
 
 ## 视觉资产
 
