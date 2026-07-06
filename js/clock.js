@@ -1,18 +1,16 @@
 const timeElement = document.getElementById("time");
 const dateElement = document.getElementById("date");
 
-const chineseWeekdays = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
-const timeCharacterCount = 8;
+const chineseWeekdays = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"];
+const timeCharacterCount = 5;
 
 const beijingDateFormatter = new Intl.DateTimeFormat("zh-CN", {
   timeZone: "Asia/Shanghai",
-  year: "numeric",
   month: "2-digit",
   day: "2-digit",
   weekday: "short",
   hour: "2-digit",
   minute: "2-digit",
-  second: "2-digit",
   hour12: false,
   hourCycle: "h23"
 });
@@ -30,9 +28,9 @@ function initializeTimeCharacters() {
 
   for (let index = 0; index < timeCharacterCount; index += 1) {
     const span = document.createElement("span");
-    span.className = index === 2 || index === 5 ? "char colon" : "char";
+    span.className = index === 2 ? "char colon" : "char";
     span.style.setProperty("--i", index);
-    span.textContent = index === 2 || index === 5 ? ":" : "0";
+    span.textContent = index === 2 ? ":" : "0";
     timeElement.appendChild(span);
   }
 }
@@ -52,19 +50,16 @@ function updateClock() {
   const now = new Date();
   const parts = beijingDateFormatter.formatToParts(now);
 
-  const year = getPart(parts, "year");
   const month = getPart(parts, "month");
   const day = getPart(parts, "day");
   const weekdayPart = getPart(parts, "weekday");
   const hour = getPart(parts, "hour").padStart(2, "0");
   const minute = getPart(parts, "minute").padStart(2, "0");
-  const second = getPart(parts, "second").padStart(2, "0");
 
   const weekday = chineseWeekdays[new Date(now.toLocaleString("en-US", { timeZone: "Asia/Shanghai" })).getDay()] || weekdayPart;
-  const timeText = `${hour}:${minute}:${second}`;
 
-  renderBalloonTime(timeText);
-  dateElement.textContent = `${year}年${month}月${day}日 ${weekday}`;
+  renderBalloonTime(`${hour}:${minute}`);
+  dateElement.textContent = `${Number(month)}月${Number(day)}日，${weekday}`;
 }
 
 updateClock();

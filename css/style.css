@@ -10,7 +10,9 @@
   --date-size: 27px;
   --time-top: 204px;
   --date-top: 330px;
-  --ear-shift: -92px;
+  --ear-left-x: -10px;
+  --ear-right-x: 10px;
+  --ear-shift: -98px;
   --fox-shift: 126px;
 
   --ice-blue: #dff5ff;
@@ -98,11 +100,20 @@ body {
   z-index: 1;
   opacity: 1;
   filter: saturate(1.04) brightness(1.03);
-  transform-origin: 50% 35%;
-  animation: earFloat var(--float-speed) ease-in-out infinite;
+  --ear-x: 0px;
+  --ear-tilt: 0deg;
+  transform-origin: 50% 40%;
+  animation: earWiggle var(--float-speed) ease-in-out infinite;
+}
+
+.ear-left {
+  --ear-x: var(--ear-left-x);
+  --ear-tilt: -1.2deg;
 }
 
 .ear-right {
+  --ear-x: var(--ear-right-x);
+  --ear-tilt: 1.2deg;
   animation-delay: -2.2s;
 }
 
@@ -295,13 +306,16 @@ body {
   }
 }
 
-@keyframes earFloat {
+@keyframes earWiggle {
   0%,
   100% {
-    transform: translateY(var(--ear-shift)) rotate(0deg);
+    transform: translate(var(--ear-x), var(--ear-shift)) rotate(var(--ear-tilt));
   }
-  50% {
-    transform: translateY(calc(var(--ear-shift) - 5px)) rotate(.35deg);
+  35% {
+    transform: translate(calc(var(--ear-x) - 2px), calc(var(--ear-shift) - 4px)) rotate(calc(var(--ear-tilt) - .7deg));
+  }
+  68% {
+    transform: translate(calc(var(--ear-x) + 2px), calc(var(--ear-shift) - 2px)) rotate(calc(var(--ear-tilt) + .65deg));
   }
 }
 
