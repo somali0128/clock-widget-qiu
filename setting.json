@@ -1,0 +1,17 @@
+{
+  "time": {
+    "showHour": true,
+    "showMinute": true,
+    "showSecond": false,
+    "separator": ":"
+  },
+  "date": {
+    "showDate": true,
+    "showYear": false,
+    "showMonth": true,
+    "showDay": true,
+    "showWeekday": true,
+    "weekdayStyle": "short",
+    "separator": "，"
+  }
+}

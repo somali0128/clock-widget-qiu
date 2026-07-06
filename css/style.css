@@ -252,6 +252,10 @@ body {
   animation: dateFloat calc(var(--float-speed) * .96) ease-in-out infinite;
 }
 
+.date-panel.is-hidden {
+  display: none;
+}
+
 .date-panel::before,
 .date-panel::after {
   content: "★";
