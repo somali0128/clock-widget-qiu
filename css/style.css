@@ -8,12 +8,14 @@
 
   --time-size: 104px;
   --date-size: 27px;
-  --time-top: 204px;
-  --date-top: 330px;
+  --time-top: 188px;
+  --date-top: 318px;
   --ear-left-x: -10px;
   --ear-right-x: 10px;
   --ear-shift: -98px;
-  --fox-shift: 126px;
+  --fox-x: 138px;
+  --fox-shift: 96px;
+  --fox-scale: .76;
 
   --ice-blue: #dff5ff;
   --bubble-blue: #82cfff;
@@ -120,6 +122,12 @@ body {
 .background-layer {
   z-index: 2;
   filter: saturate(1.05) brightness(1.02);
+}
+
+.frame-layer {
+  z-index: 5;
+  opacity: .5;
+  filter: saturate(1.03) brightness(1.02);
 }
 
 .ambient-twinkles,
@@ -326,11 +334,11 @@ body {
 @keyframes foxBreath {
   0%,
   100% {
-    transform: translateY(var(--fox-shift)) scale(1);
+    transform: translate(var(--fox-x), var(--fox-shift)) scale(var(--fox-scale));
     filter: saturate(1.02) brightness(1.01);
   }
   50% {
-    transform: translateY(calc(var(--fox-shift) - 3px)) scale(1.01, .996);
+    transform: translate(var(--fox-x), calc(var(--fox-shift) - 3px)) scale(calc(var(--fox-scale) * 1.01), calc(var(--fox-scale) * .996));
     filter: saturate(1.04) brightness(1.035);
   }
 }
