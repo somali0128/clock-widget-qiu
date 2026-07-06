@@ -121,13 +121,8 @@ body {
 
 .background-layer {
   z-index: 2;
-  filter: saturate(1.05) brightness(1.02);
-}
-
-.frame-layer {
-  z-index: 5;
   opacity: .5;
-  filter: saturate(1.03) brightness(1.02);
+  filter: saturate(1.05) brightness(1.02);
 }
 
 .ambient-twinkles,
