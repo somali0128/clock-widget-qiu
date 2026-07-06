@@ -6,7 +6,7 @@
   --source-width: 1536;
   --source-height: 1024;
 
-  --time-size: 104px;
+  --time-size: 118px;
   --date-size: 27px;
   --time-top: 188px;
   --date-top: 318px;
@@ -99,6 +99,7 @@ body {
 }
 
 .ear-layer {
+  display: none;
   z-index: 1;
   opacity: 1;
   filter: saturate(1.04) brightness(1.03);
