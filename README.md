@@ -17,7 +17,7 @@ Clock Widget Qiu 的思路是：用图片素材负责整体风格，用 HTML 文
 
 ## 截图 / GIF 演示
 
-![Clock Widget Qiu Preview](./preview.png)
+![Clock Widget Qiu Preview](./preview.gif)
 
 推荐浏览器源尺寸：
 
