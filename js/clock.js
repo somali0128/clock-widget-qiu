@@ -3,8 +3,8 @@ const dateElement = document.getElementById("date");
 const datePanelElement = document.querySelector(".date-panel");
 
 const weekdayNames = {
-  short: ["周日", "周一", "周二", "周三", "周四", "周五", "周六"],
-  long: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"]
+  short: ["\u5468\u65e5", "\u5468\u4e00", "\u5468\u4e8c", "\u5468\u4e09", "\u5468\u56db", "\u5468\u4e94", "\u5468\u516d"],
+  long: ["\u661f\u671f\u65e5", "\u661f\u671f\u4e00", "\u661f\u671f\u4e8c", "\u661f\u671f\u4e09", "\u661f\u671f\u56db", "\u661f\u671f\u4e94", "\u661f\u671f\u516d"]
 };
 
 const defaultSettings = {
@@ -21,7 +21,7 @@ const defaultSettings = {
     showDay: true,
     showWeekday: true,
     weekdayStyle: "short",
-    separator: "，"
+    separator: "\uff0c"
   }
 };
 
@@ -103,15 +103,15 @@ function buildDateText(parts, settings) {
 
   if (settings.date.showDate) {
     if (settings.date.showYear) {
-      dateTextParts.push(`${parts.year}年`);
+      dateTextParts.push(`${parts.year}\u5e74`);
     }
 
     if (settings.date.showMonth) {
-      dateTextParts.push(`${Number(parts.month)}月`);
+      dateTextParts.push(`${Number(parts.month)}\u6708`);
     }
 
     if (settings.date.showDay) {
-      dateTextParts.push(`${Number(parts.day)}日`);
+      dateTextParts.push(`${Number(parts.day)}\u65e5`);
     }
 
     const dateText = dateTextParts.join("");
@@ -125,7 +125,7 @@ function buildDateText(parts, settings) {
     datePieces.push(weekdayNames[style][parts.weekdayIndex]);
   }
 
-  return datePieces.join(settings.date.separator || "，");
+  return datePieces.join(settings.date.separator || "\uff0c");
 }
 
 function initializeTimeCharacters(timeText) {

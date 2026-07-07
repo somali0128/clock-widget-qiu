@@ -12,6 +12,6 @@
     "showDay": true,
     "showWeekday": true,
     "weekdayStyle": "short",
-    "separator": "，"
+    "separator": "\uff0c"
   }
 }

@@ -5,6 +5,7 @@
 
   --source-width: 1536;
   --source-height: 1024;
+  --source-fit-scale: .5859375;
 
   --time-size: 118px;
   --date-size: 27px;
@@ -13,8 +14,8 @@
   --ear-left-x: -10px;
   --ear-right-x: 10px;
   --ear-shift: -98px;
-  --fox-x: 138px;
-  --fox-shift: 96px;
+  --fox-x: 96px;
+  --fox-shift: 36px;
   --fox-scale: .76;
 
   --ice-blue: #dff5ff;
@@ -122,8 +123,12 @@ body {
 
 .background-layer {
   z-index: 2;
+  width: 1536px;
+  height: 1024px;
   opacity: .5;
   filter: saturate(1.05) brightness(1.02);
+  transform: scale(var(--source-fit-scale));
+  transform-origin: 0 0;
 }
 
 .ambient-twinkles,
@@ -262,7 +267,7 @@ body {
 
 .date-panel::before,
 .date-panel::after {
-  content: "★";
+  content: "\2605";
   position: absolute;
   top: 16px;
   color: #fff3b5;
